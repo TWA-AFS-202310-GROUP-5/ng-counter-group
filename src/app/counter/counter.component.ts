@@ -10,6 +10,8 @@ export class CounterComponent {
 
   @Input() number = 0;
   @Output() numberChange = new EventEmitter<number>();
+  @Output()
+  counterDeleted: EventEmitter<any> = new EventEmitter();
   
   onIncrease(){
     this.number++;
@@ -18,5 +20,8 @@ export class CounterComponent {
   onDecrease() {
     this.number--;
     this.numberChange.emit(this.number);
+  }
+  onDeleteCounter(){
+    this.counterDeleted.emit();
   }
 }

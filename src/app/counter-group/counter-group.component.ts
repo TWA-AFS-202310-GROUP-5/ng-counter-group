@@ -21,4 +21,10 @@ export class CounterGroupComponent {
   onCreateCounter() {
     this.counters.push({num: 0})
     }
+    onDeleteCounter(counter: any){
+      var index = this.counters.findIndex((elt) => (elt===counter));
+    if (index != -1) {
+      this.counters.splice(index, 1);
+    }
+    }
 }

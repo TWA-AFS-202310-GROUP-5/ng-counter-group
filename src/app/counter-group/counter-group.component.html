@@ -2,7 +2,7 @@
 <button mat-raised-button (click)="onCreateCounter()">
 Add Counter
 </button>
-<app-counter *ngFor="let counter of counters" [(number)] = "counter.num">
+<app-counter *ngFor="let counter of counters" [(number)] = "counter.num" (counterDeleted) = "onDeleteCounter(counter)" >
 
 </app-counter>
 <span>
