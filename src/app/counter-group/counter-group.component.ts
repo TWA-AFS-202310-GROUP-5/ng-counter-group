@@ -22,4 +22,8 @@ export class CounterGroupComponent {
   onAdd() {
     this.counters.push({ num: 0 })
   }
+
+  remove(ind:number){
+    this.counters.splice(ind, 1)
+  }
 }
