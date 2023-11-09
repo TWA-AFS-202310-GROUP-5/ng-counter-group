@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-counter-group',
@@ -6,9 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./counter-group.component.css']
 })
 export class CounterGroupComponent {
+  
   counters: {num: number}[] = [
     {num: 1},
     {num: 2},
     {num: 3},
   ]
+
+  get sum() {
+    return this.counters.reduce(
+      (result, current) => result + current.num, 0
+    )
+  }
 }
