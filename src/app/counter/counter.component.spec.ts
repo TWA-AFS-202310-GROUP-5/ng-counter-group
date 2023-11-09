@@ -30,4 +30,10 @@ describe('CounterComponent', () => {
     component.onDecrease()
     expect(component.number).toEqual(1)
   })
+
+  it('should reset number to 0 when call counter reset', () => {
+    component.number = 2
+    component.reset()
+    expect(component.number).toEqual(0)
+  })
 });
