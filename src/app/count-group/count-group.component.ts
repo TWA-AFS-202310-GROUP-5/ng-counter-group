@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CountGroupComponent {
   counters: {num: number}[] = [
-    {num: 0},
+    {num: 0}
   ]
 
   get sum() {
