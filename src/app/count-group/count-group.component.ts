@@ -9,7 +9,8 @@ export class CountGroupComponent {
   counters: {num: number}[] = [
     {num: 1},
     {num: 2},
-    {num: 3}
+    {num: 3},
+    {num: 4}
   ]
 
 }
