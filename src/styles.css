@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+#container{
+    width: 450px;
+    height: 550px;
+    margin: auto;
+    margin-top:100px;
+    background: none;
+    border-style: solid;
+    border-color: rgb(208, 218, 218);
+    border-radius: 10px;
+    border-width: thin;
+    box-shadow: rgb(197, 230, 220) 0px 0px 6px ;
+}

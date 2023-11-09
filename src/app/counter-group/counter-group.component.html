@@ -1,0 +1,18 @@
+<body>
+    <h1>Counter Group</h1>
+
+    <button (click)="createCounter()"> create counter </button>
+
+    <div id = "countersBox">
+        <div  *ngFor="let counter of counters">
+            <app-counter    
+                [number] = "counter.num"
+                (change) = "counter.num = $event">
+            </app-counter>
+            <button class="deletebutton" (click)="onClickRemove(counters.indexOf(counter))"> remove </button>
+        </div>
+    </div>
+
+    <h2> Sum : {{sum}} </h2>
+    <button (click)="onReset()"> reset </button>
+</body>
