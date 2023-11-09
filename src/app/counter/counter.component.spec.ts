@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CounterComponent } from './counter.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
 
 describe('CounterComponent', () => {
   let component: CounterComponent;
@@ -8,7 +11,12 @@ describe('CounterComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CounterComponent]
+      declarations: [CounterComponent],
+      imports: [
+        MatIconModule,
+        MatButtonModule,
+        MatDividerModule
+      ],
     });
     fixture = TestBed.createComponent(CounterComponent);
     component = fixture.componentInstance;
@@ -35,4 +43,9 @@ describe('CounterComponent', () => {
     expect(component.number).toBe(1);
   })
 
+  it("should reset num to 0 when call reset", ()=>{
+    component.number = 2;
+    component.onReset();
+    expect(component.number).toBe(0);
+  })
 });
