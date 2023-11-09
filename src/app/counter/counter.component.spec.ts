@@ -38,11 +38,11 @@ describe('CounterComponent', () => {
     expect(component.number).toEqual(1)
   });
 
-  it('should isShowDecreaseButton be true when number <= 10', () => {
+  it('should isShowIncreaseButton be true when number <= 10', () => {
     //given
     component.number = 2
     //then
-    expect(component.isShowDecreaseButton).toEqual(true)
+    expect(component.isShowIncreaseButton).toEqual(true)
   });
 
   it('should isShowDecreaseButton be false when number > 10', () => {
