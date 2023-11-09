@@ -7,10 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CountGroupComponent {
   counters: {num: number}[] = [
-    {num: 1},
-    {num: 2},
-    {num: 3},
-    {num: 4}
+    {num: 0},
   ]
 
   get sum() {
@@ -19,5 +16,18 @@ export class CountGroupComponent {
 
   onAdd() {
     this.counters.push({num:0})
+  }
+
+  onReset() {
+    this.counters.map(n => n.num =0);
+  }
+
+  onDelete(index:number) {
+      this.counters.splice(index,1)
+      
+  }
+
+  onResetOne(index:number) {
+    this.counters[index] = {num:0}
   }
 }
