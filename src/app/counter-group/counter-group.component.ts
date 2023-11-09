@@ -27,4 +27,10 @@ export class CounterGroupComponent {
       this.counters.splice(index, 1);
     }
     }
+
+    onResetAll(){
+      this.counters.map(
+        counter => counter.num = 0
+      );
+    }
 }

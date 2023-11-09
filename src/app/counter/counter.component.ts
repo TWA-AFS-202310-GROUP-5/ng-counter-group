@@ -24,4 +24,8 @@ export class CounterComponent {
   onDeleteCounter(){
     this.counterDeleted.emit();
   }
+  onReset(){
+    this.number = 0;
+    this.numberChange.emit(this.number);
+  }
 }
