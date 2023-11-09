@@ -3,8 +3,12 @@
 
     <button (click)="createCounter()"> create counter </button>
 
-    <app-counter *ngFor="let item of counters">
-    </app-counter>
-
+    <div id = "countersBox">
+        <app-counter
+            *ngFor="let counter of counters" 
+            [number] = "counter.num"
+            (change) = "counter.num = $event">    
+        </app-counter>
+    </div>
     <h2> Sum : {{sum}} </h2>
 </body>

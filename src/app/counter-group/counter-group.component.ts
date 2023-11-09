@@ -7,16 +7,15 @@ import { Component } from '@angular/core';
 })
 export class CounterGroupComponent {
   
-  sum = 0 
-  counters : {num: number}[] = [
-    {num:1},
-    {num:2},
-    {num:3},
-  ]
+  counters : {num: number}[] = [{num: 1}, {num:2}]
 
   createCounter(){
-    this.counters.push({num: 1})
-    this.sum++
+    this.counters.push({num: 0})
+  }
+
+  get sum(){
+    return this.counters.reduce(
+      (result, current) => result + current.num, 0)
   }
   
 }
