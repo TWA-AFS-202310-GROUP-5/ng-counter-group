@@ -25,10 +25,6 @@ export class CounterComponent {
     this.emitChangeNum()
   }
 
-  onDestory() {
-    this.destory.emit(true)
-  }
-
   emitChangeNum() {
     this.change.emit(this.number)
   }

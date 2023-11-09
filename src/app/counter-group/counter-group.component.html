@@ -5,11 +5,13 @@
 </div>
 <br>
 <div>
-    <app-counter 
-        *ngFor="let counter of counters"
+    <div *ngFor="let counter of counters; let i = index">
+        <app-counter 
         [number]="counter.num"
         (change)="counter.num = $event"
-    ></app-counter>
+        ></app-counter>
+        <button (click)="onRemoveCounter(i)">Remove</button>
+    </div>
 </div>
 <br>
 <div>

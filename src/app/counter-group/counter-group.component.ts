@@ -16,6 +16,10 @@ export class CounterGroupComponent {
     this.counters.map(counter => counter.num = 0)
   }
 
+  onRemoveCounter(index: number) {
+    this.counters.splice(index, 1);
+  }
+
   get sum() {
     return this.counters.reduce(
       (result, current) => result + current.num, 0
