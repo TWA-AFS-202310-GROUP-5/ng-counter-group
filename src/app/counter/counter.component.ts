@@ -22,7 +22,4 @@ export class CounterComponent {
     this.number = 0
     this.change.emit(this.number)
   }
-  remove(){
-    
-  }
 }
