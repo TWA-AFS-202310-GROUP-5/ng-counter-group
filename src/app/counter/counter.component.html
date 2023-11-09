@@ -1,0 +1,10 @@
+<div>
+
+    <button (click)="onIncrease()" *ngIf="isShowIncreaseButton"> + </button>
+
+    <span id="numberBox"> number : {{number}} </span>
+
+    <button (click)="onDecrease()" *ngIf="isShowDecreaseButton"> - </button>
+    <button (click)="reset()"> reset </button>
+
+</div>
