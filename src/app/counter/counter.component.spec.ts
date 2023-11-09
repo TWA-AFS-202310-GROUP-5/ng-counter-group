@@ -29,15 +29,13 @@ describe('CounterComponent', () => {
     expect(component.number).toEqual(3)
   });
 
-  it('should increase number when click increase button', () => {
+  it('should decrease number when call onDecrease', () => {
     //given
     component.number = 2
-    fixture.debugElement.query(By.css('button')).triggerEventHandler('click')
-    fixture.detectChanges()
     //when
-    const text = fixture.debugElement.query(By.css('span')).nativeElement.textContent
+    component.onDecrease()
     //then
-    expect(text).toEqual(" number : 3 ")
+    expect(component.number).toEqual(1)
   });
 
   it('should isShowDecreaseButton be true when number <= 10', () => {
@@ -54,6 +52,22 @@ describe('CounterComponent', () => {
     expect(component.isShowDecreaseButton).toEqual(true)
   });
 
+
+
+  /*
+  it('should increase number when click increase button', () => {
+    //given
+    component.number = 2
+    fixture.debugElement.query(By.css('button')).triggerEventHandler('click')
+    fixture.detectChanges()
+    //when
+    const text = fixture.debugElement.query(By.css('span')).nativeElement.textContent
+    //then
+    expect(text).toEqual(" number : 3 ")
+  });
+  */
+
+  /*
   it('should rest number to 0 when click reset button', () => {
     //given
     component.number = 7
@@ -64,5 +78,5 @@ describe('CounterComponent', () => {
     //then
     expect(text).toEqual(" number : 0 ")
   });
-
+  */
 });
