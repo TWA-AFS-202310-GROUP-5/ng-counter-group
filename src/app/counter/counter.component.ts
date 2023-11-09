@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class CounterComponent {
 
+  number = 0;
+  onIncrease(){
+    this.number++;
+  }
+  onDecrease() {
+    this.number--;
+  }
 }
