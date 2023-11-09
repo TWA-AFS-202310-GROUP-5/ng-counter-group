@@ -18,4 +18,8 @@ describe('CounterGroupComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should return the sum of every counter number', () => {
+    component.counters
+  })
 });

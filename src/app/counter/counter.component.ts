@@ -18,4 +18,8 @@ export class CounterComponent {
     this.number--
     this.change.emit(this.number)
   }
+  reset(){
+    this.number = 0
+    this.change.emit(this.number)
+  }
 }
