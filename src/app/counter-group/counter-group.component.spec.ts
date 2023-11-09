@@ -42,7 +42,7 @@ describe('CounterGroupComponent', () => {
     expect(component.sum).toBe(0);
   });
 
-  it('should change all counters to 0 when onResetCounter', () => {
+  it('should remove counter when onRemoveCounter', () => {
     component.counters = [{num: 1}, {num: 2}, {num: -1}];
 
     component.onRemoveCounter(1)
