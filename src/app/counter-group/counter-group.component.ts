@@ -12,7 +12,7 @@ export class CounterGroupComponent {
     this.counters.push({ num: 0 })
   }
 
-  onResetCounter() {
+  onResetCounters() {
     this.counters.map(counter => counter.num = 0)
   }
 
