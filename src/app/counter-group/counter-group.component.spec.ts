@@ -53,4 +53,14 @@ describe('CounterGroupComponent', () => {
     expect(component.sum).toBe(0);
   });
 
+  it('should create counter when onCreateCounter', () => {
+    component.counters = [];
+
+    component.onCreateCounter()
+
+    expect(component.counters.length).toBe(1);
+    expect(component.counters[0].num).toBe(0);
+    expect(component.sum).toBe(0);
+  });
+
 });
