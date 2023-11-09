@@ -12,6 +12,10 @@ export class CounterGroupComponent {
     this.counters.push({ num: 0 })
   }
 
+  onResetCounter() {
+    this.counters.map(counter => counter.num = 0)
+  }
+
   get sum() {
     return this.counters.reduce(
       (result, current) => result + current.num, 0

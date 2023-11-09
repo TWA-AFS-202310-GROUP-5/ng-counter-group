@@ -18,4 +18,17 @@ describe('CounterGroupComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should get sum of counters when sum', () => {
+    component.counters = [{num: 1}, {num: 2}, {num: -1}];
+
+    expect(component.sum).toBe(2);
+  });
+
+  it('should get 0 of counters when sum given counters is empty', () => {
+    component.counters = [];
+
+    expect(component.sum).toBe(0);
+  });
+
 });
