@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CouterComponent } from './couter.component';
+import { CounterComponent } from './counter.component';
 
-describe('CouterComponent', () => {
-  let component: CouterComponent;
-  let fixture: ComponentFixture<CouterComponent>;
+describe('CounterComponent', () => {
+  let component: CounterComponent;
+  let fixture: ComponentFixture<CounterComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CouterComponent]
+      declarations: [CounterComponent]
     });
-    fixture = TestBed.createComponent(CouterComponent);
+    fixture = TestBed.createComponent(CounterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
