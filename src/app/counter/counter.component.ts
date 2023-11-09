@@ -19,6 +19,11 @@ export class CounterComponent {
     this.emitChangeNum()
   }
 
+  onReset() {
+    this.number = 0
+    this.emitChangeNum()
+  }
+
   emitChangeNum() {
     this.change.emit(this.number)
   }
