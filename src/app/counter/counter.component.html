@@ -1,17 +1,14 @@
-<div>
+<div id="counter-line" >
     <button  (click)= "onIncrease()" mat-mini-fab color="accent">
         <mat-icon>add</mat-icon>
     </button>
     
     <span>number: {{number}}</span>
-    
     <button  (click)= "onDecrease()" mat-mini-fab color="accent">
         <mat-icon>remove</mat-icon>
     </button>
     <button mat-raised-button (click)= "onReset()">Reset</button>
-    <button mat-raised-button color="warn" (click) = "onDeleteCounter()">
-        Remove
-        </button>
+
 </div>
 
 
