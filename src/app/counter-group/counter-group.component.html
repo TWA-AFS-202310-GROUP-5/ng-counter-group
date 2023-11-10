@@ -1,0 +1,17 @@
+<h1>Counter Group</h1>
+<button mat-raised-button (click)="onCreateCounter()">
+Add Counter
+</button>
+<div *ngFor="let counter of counters">
+    <app-counter  [(number)] = "counter.num" >
+    </app-counter>
+    <button mat-raised-button color="warn" (click) = "onDeleteCounter(counter)">
+        Remove
+    </button>
+</div>
+
+<span>
+    sum : {{sum}}
+</span>
+<button mat-raised-button (click)= "onResetAll()">Reset</button>
+
