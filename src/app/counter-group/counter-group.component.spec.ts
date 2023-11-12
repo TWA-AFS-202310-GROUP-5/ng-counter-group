@@ -29,14 +29,17 @@ describe('CounterGroupComponent', () => {
     expect(component.sum).toEqual(7)
   })
 
-  it('should remove the corresponding counter and get correct sum value when call remove', () => {
+  it('should remove the corresponding counter when call remove', () => {
     component.counters = [
       { num: 1 },
       { num: 2 },
       { num: 3 },
     ]
     component.remove(0)
-    expect(component.sum).toEqual(5)
+    expect(component.counters).toEqual([
+      { num: 2 },
+      { num: 3 },
+    ])
   });
 
   it('should get 0 sum value when call reset', () => {
@@ -57,6 +60,11 @@ describe('CounterGroupComponent', () => {
     ]
     component.onAdd()
     expect(component.counters.length).toEqual(4)
-    expect(component.sum).toEqual(6)
+    expect(component.counters).toEqual([
+      { num: 1 },
+      { num: 2 },
+      { num: 3 },
+      { num: 0 },
+    ])
   })
 });
